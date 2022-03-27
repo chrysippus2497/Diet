@@ -19,3 +19,6 @@
   ##### DATABASE
   - MySQL
 
+  ##### PAYMENT GATEWAY
+  - Paymongo
+
