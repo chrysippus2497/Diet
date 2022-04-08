@@ -12,18 +12,16 @@ if(isset($_POST['submit']))
     $ret=mysqli_query($con, "select Email from tbluser where Email='$email' ");
     $result=mysqli_fetch_array($ret);
     if($result>0){
-$msg="This email  associated with another account";
+	$msg="This email  associated with another account";
     }
     else{
-    $query=mysqli_query($con, "insert into tbluser(FullName, MobileNumber, Email,  Password) value('$fname', '$mobno', '$email', '$password' )");
-    if ($query) {
-    $msg="You have successfully registered";
-  }
-  else
-    {
-      $msg="Something Went Wrong. Please try again";
-    }
-}
+	    $query=mysqli_query($con, "insert into tbluser(FullName, MobileNumber, Email,  Password) value('$fname', '$mobno', '$email', '$password' )");
+	    if ($query) {
+	    $msg="You have successfully registered";
+	    } else {
+	      $msg="Something Went Wrong. Please try again";
+	    }
+	}
 }
 
  ?>
